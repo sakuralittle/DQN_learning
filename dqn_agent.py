@@ -38,6 +38,7 @@ class DQNAgent:
         
         self.optimizer = optim.Adam(self.model.parameters(), lr=self.learning_rate)
         self.criterion = nn.SmoothL1Loss()  # Huber Loss, better for DQN as it's less sensitive to outliers
+        #原本是MSE
         self.update_rate = 2
         self.update_counter = 0
         
